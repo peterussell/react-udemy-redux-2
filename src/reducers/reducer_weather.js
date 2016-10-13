@@ -9,8 +9,7 @@ export default function(state = [], action) {
          The '...' syntax means expand the array, so in this case we're saying
          'create a new array, include the new piece of data, then expand the
          existing state and add each entry to the new array'. */
-      return [ state.payload.data, ...state ];
+      return [ action.payload.data, ...state ];
   }
-
   return state;
 }
